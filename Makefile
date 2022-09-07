@@ -5,22 +5,22 @@
 CLUSTER_NAME=hello
 REGION_NAME=us-west-2
 KEYPAIR_NAME=key-pair-us-west-2
-DEPLOYMENT_NAME=app
-NEW_IMAGE_NAME=registry.hub.docker.com/gampie/app:latest
+DEPLOYMENT_NAME=hello-app
+NEW_IMAGE_NAME=registry.hub.docker.com/gampie/hello-app:latest
 CONTAINER_PORT=80
 HOST_PORT=8080
 KUBECTL=./bin/kubectl
 
 setup:
 	# Create a python virtualenv & activate it
-	python3 -m venv ~/.capstone
-	# source ~/.capstone/bin/activate 
+	python3 -m venv ~/.devops-capstone
+	# source ~/.devops-capstone/bin/activate 
 
 install:	# TODO: Add a Docker analysis (DevSecOps)
 	# This should be run from inside a virtualenv
 	echo "Installing: dependencies..."
 	pip install --upgrade pip &&\
-	pip install -r app/requirements.txt
+	pip install -r hello_app/requirements.txt
 	# pip install "ansible-lint[community,yamllint]"
 	echo
 	pytest --version
@@ -41,20 +41,20 @@ install:	# TODO: Add a Docker analysis (DevSecOps)
 	
 test:
 	# Additional, optional, tests could go here
-	#python -m pytest -vv app/hello.py
+	#python -m pytest -vv hello_app/hello.py
 	#python -m pytest 
 
 lint:
 	# https://github.com/koalaman/shellcheck: a linter for shell scripts
 	./bin/shellcheck -Cauto -a ./bin/*.sh
 	# https://github.com/hadolint/hadolint: a linter for Dockerfiles
-	./bin/hadolint app/Dockerfile
+	./bin/hadolint hello_app/Dockerfile
 	# https://www.pylint.org/: a linter for Python source code 
 	# This should be run from inside a virtualenv
-	pylint --output-format=colorized --disable=C app/hello.py
+	pylint --output-format=colorized --disable=C hello_app/hello.py
 
 run-app:
-	python3 app/hello.py
+	python3 hello_app/hello.py
 
 build-docker:
 	./bin/build_docker.sh

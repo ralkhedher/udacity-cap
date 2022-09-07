@@ -3,7 +3,7 @@
 
 # Assumes that an image is built via `run_docker.sh`
 DOCKER_HUB_ID="gampie"
-DOCKER_REPOSITORY="app"
+DOCKER_REPOSITORY="hello-app"
 VERSION="1.000"
 
 # Step 1:
