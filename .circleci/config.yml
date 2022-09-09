@@ -38,14 +38,14 @@ workflows:
       - docker/publish:
           matrix:
             parameters:
-              image: [$DOCKER_LOGIN/hello-app]
-              path: [hello_app]
-              docker-context: [hello_app]
+              image: [$DOCKER_LOGIN/capstone]
+              path: [reemalkhedher/capstone:v1.0]
+              docker-context: [capstone]
               deploy: [true]
               # We publish two images with different version tags:
               # - numbered version
               # - "latest"
-              # tag: ['$(<hello_app/VERSION.txt)-${CIRCLE_SHA1:0:7}', 'latest']
-              tag: ["$(<hello_app/VERSION.txt)", "latest"]
+              # tag: ['$(<capstone/VERSION.txt)-${CIRCLE_SHA1:0:7}', 'latest']
+              tag: ["$(<capstone/VERSION.txt)", "latest"]
               update-description: [true]
           requires: [init]
