@@ -1,0 +1,5 @@
+https://medium.com/@sabbirhossain_70520/capstone-project-cloud-devops-udacity-25d0fd72833e
+git token = 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
+https://github.com/guillermo-ampie/devops-capstone
+https://geeksrepos.com/dbritto-dev/udacity-cloud-devops-engineer-capstone
+https://github.com/dbritto-dev/udacity-cloud-devops-engineer-capstone
