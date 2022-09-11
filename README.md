@@ -1,4 +1,6 @@
-# Udacity Capstone project by Reema
+## Udacity AWS DevOps Engineer Capstone Project ~ Reema
+[![ralkhedher](https://circleci.com/gh/ralkhedher/udacity-cap.svg?style=shield)](https://github.com/ralkhedher/udacity-cap)
+
 ## Introduction 
 This project is part of the requirement to successfully graduate from the __Udacity__ *Nanodegree* for _Cloud DevOps_. 
 In this project a simple python/flask app is operationalized using CircleCI and a Kubernetes(K8S) cluster deployed in AWS EKS.
