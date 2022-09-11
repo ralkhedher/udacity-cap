@@ -46,6 +46,6 @@ workflows:
               # - numbered version
               # - "latest"
               # tag: ['$(<capstone/VERSION.txt)-${CIRCLE_SHA1:0:7}', 'latest']
-              tag: ["$(<capstone)", "latest"]
+              # tag: ["$(<capstone)", "latest"]
               update-description: [true]
           requires: [init]
