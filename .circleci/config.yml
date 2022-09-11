@@ -40,12 +40,12 @@ workflows:
             parameters:
               image: [$DOCKER_LOGIN/capstone]
               # path: [capstone]
-              docker-context: [capstone]
+              # docker-context: [capstone]
               deploy: [true]
               # We publish two images with different version tags:
               # - numbered version
               # - "latest"
               # tag: ['$(<capstone/VERSION.txt)-${CIRCLE_SHA1:0:7}', 'latest']
               # tag: ["$(<capstone)", "latest"]
-              update-description: [true]
+              # update-description: [true]
           requires: [init]
