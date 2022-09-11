@@ -38,8 +38,8 @@ workflows:
       - docker/publish:
           matrix:
             parameters:
-              image: [$DOCKER_LOGIN/capstone]
-              path: [reemalkhedher/capstone]
+              image: [registry.hub.docker.com/reemalkhedher/capstone]
+              path: [registry.hub.docker.com/reemalkhedher/capstone]
               docker-context: [capstone]
               deploy: [true]
               # We publish two images with different version tags:
