@@ -1,6 +1,11 @@
 # Udacity Capstone project by Reema
 ## Introduction 
 This project is part of the requirement to successfully graduate from the __Udacity__ *Nanodegree* for _Cloud DevOps_. 
+In this project a simple python/flask app is operationalized using CircleCI and a Kubernetes(K8S) cluster deployed in AWS EKS.
+
+- In a CircleCI pipeline, we lint the project's code, build a Docker image and deploy it to a public Docker Registry: Docker Hub
+- Then in an AWS EKS cluster, we run the application Later, we promote to production a new app version using a `rolling update strategy`
+
 ## Stack
 [] Flask app
 [] K8s
