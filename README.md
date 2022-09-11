@@ -8,14 +8,13 @@ In this project a simple python/flask app is operationalized using CircleCI and 
 - In a CircleCI pipeline, we lint the project's code, build a Docker image and deploy it to a public Docker Registry: Docker Hub
 - Then in an AWS EKS cluster, we run the application Later, we promote to production a new app version using a `rolling update strategy`
 
-## Stack
-[] Flask app
-[] K8s
-[] CircleCI
-[] Docker
+## SetUp
+1. Create Cluster
+Run the `./bin/eks_create_cluster.sh` script when logged in to your ecs server.
+
 
 ## Project Structure
-
+![Structure](screenshots/project-structure.png)
 
 ## Verifying
 ### Get link to the application
