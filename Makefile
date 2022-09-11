@@ -2,11 +2,11 @@
 # environment setup, install, lint and build
 
 #Vars
-CLUSTER_NAME=hello
+CLUSTER_NAME=capstone
 REGION_NAME=us-west-2
-KEYPAIR_NAME=key-pair-us-west-2
-DEPLOYMENT_NAME=hello-app
-NEW_IMAGE_NAME=registry.hub.docker.com/gampie/hello-app:latest
+KEYPAIR_NAME=capstone
+DEPLOYMENT_NAME=capstone-app
+NEW_IMAGE_NAME=registry.hub.docker.com/reemalkhedher/capstone:latest
 CONTAINER_PORT=80
 HOST_PORT=8080
 KUBECTL=./bin/kubectl

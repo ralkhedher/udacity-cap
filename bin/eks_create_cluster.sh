@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CLUSTER="hello"
+CLUSTER="capstone"
 REGION="us-west-2"
 CLUSTER_NAME="${CLUSTER}.${REGION}.eksctl.io"
 

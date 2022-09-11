@@ -9,7 +9,7 @@ DOCKER_HUB_ID="reemalkhedher"
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-dockerpath="reemalkhedher/capstone:v1.0"
+dockerpath="reemalkhedher/capstone"
 
 # Step 2:
 # Authenticate & tag

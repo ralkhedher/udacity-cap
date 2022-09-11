@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: hello
+  name: capstone
   region: us-west-2
 
 iam:
@@ -18,5 +18,5 @@ nodeGroups:
     volumeSize: 80
     ssh:
       allow: true
-      publicKeyName: key-pair-us-west-2
+      publicKeyName: capstone
 
