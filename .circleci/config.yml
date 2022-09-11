@@ -39,7 +39,7 @@ workflows:
           matrix:
             parameters:
               image: [$DOCKER_LOGIN/capstone]
-              path: [capstone]
+              # path: [capstone]
               docker-context: [capstone]
               deploy: [true]
               # We publish two images with different version tags:
