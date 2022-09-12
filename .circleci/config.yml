@@ -9,12 +9,11 @@ jobs:
       - image: python:3.7.3-stretch
     steps:
       - checkout
-      # Download and cache dependencies
+      
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "hello_app/requirements.txt" }}
-            # fallback to using the latest cache if no exact match is found
-            # - v1-dependencies-
+           
       - run:
           name: Install dependencies
           command: |
@@ -23,7 +22,7 @@ jobs:
             make install
       - save_cache:
           paths:
-            - ./.devops-capstone # TODO: Include in cache the "bin" directory
+            - ./.devops-capstone
           key: v1-dependencies-{{ checksum "hello_app/requirements.txt" }}
       - run:
           name: Run lint
@@ -42,10 +41,6 @@ workflows:
               path: [hello_app]
               docker-context: [hello_app]
               deploy: [true]
-              # We publish two images with different version tags: 
-              # - numbered version
-              # - "latest"
-              # tag: ['$(<hello_app/VERSION.txt)-${CIRCLE_SHA1:0:7}', 'latest']
               tag: ['$(<hello_app/VERSION.txt)', 'latest']
               update-description: [true]
           requires: [init]

@@ -7,7 +7,6 @@ DOCKER_HUB_ID="registry.hub.docker.com/reemalkhedher"
 DOCKER_REPOSITORY="capstone"
 DEPLOYMENT_NAME=${DOCKER_REPOSITORY}
 CONTAINER_PORT=80
-# VERSION=1.000
 REPLICAS=4
 
 dockerpath=${DOCKER_HUB_ID}/${DOCKER_REPOSITORY}
@@ -28,5 +27,4 @@ echo
 echo "Listing pods"
 kubectl get pods -o wide
 
-# Forward the container port to a host port
-#kubectl port-forward service/${DEPLOYMENT_NAME} ${HOST_PORT}:${CONTAINER_PORT}
+

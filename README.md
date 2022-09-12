@@ -1,5 +1,5 @@
 ## Udacity AWS DevOps Engineer Capstone Project ~ Reema
-[![ralkhedher](https://circleci.com/gh/ralkhedher/udacity-cap.svg?style=shield)](https://github.com/ralkhedher/udacity-cap)
+[![ralkhedher](https://circleci.com/gh/ralkhedher/udacity-cap.svg?style=svg)](https://github.com/ralkhedher/udacity-cap)
 
 ## Introduction 
 This project is part of the requirement to successfully graduate from the __Udacity__ *Nanodegree* for _Cloud DevOps_. 

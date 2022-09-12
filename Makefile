@@ -23,10 +23,6 @@ install:	# TODO: Add a Docker analysis (DevSecOps)
 	pip install -r hello_app/requirements.txt
 	# pip install "ansible-lint[community,yamllint]"
 	echo
-	pytest --version
-	# ansible --version
-	# ansible-lint --version
-	echo
 	echo "Installing: shellcheck"
 	./bin/install_shellcheck.sh
 	echo
@@ -39,10 +35,6 @@ install:	# TODO: Add a Docker analysis (DevSecOps)
 	echo "Installing: eksctl"
 	./bin/install_eksctl.sh
 	
-test:
-	# Additional, optional, tests could go here
-	#python -m pytest -vv hello_app/hello.py
-	#python -m pytest 
 
 lint:
 	# https://github.com/koalaman/shellcheck: a linter for shell scripts
@@ -73,9 +65,6 @@ k8s-deployment: eks-create-cluster
 	# If using minikube, first run: minikube start
 	./bin/k8s_deployment.sh
 
-port-forwarding: 
-	# Needed for "minikube" only
-	${KUBECTL} port-forward service/${DEPLOYMENT_NAME} ${HOST_PORT}:${CONTAINER_PORT}
 
 rolling-update:
 	${KUBECTL} get deployments -o wide

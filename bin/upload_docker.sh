@@ -1,14 +1,7 @@
 #!/usr/bin/env bash
-# This file tags and uploads an image to Docker Hub
 
-# Assumes that an image is built via `run_docker.sh`
 DOCKER_HUB_ID="reemalkhedher"
-# DOCKER_REPOSITORY="hello-app"
-# VERSION="1.000"
 
-# Step 1:
-# Create dockerpath
-# dockerpath=<your docker ID/path>
 dockerpath="reemalkhedher/capstone"
 
 # Step 2:
